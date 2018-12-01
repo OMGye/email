@@ -56,7 +56,7 @@ public class MailUtil {
 	public static void main(String[] args) {
 		String str = "@qq.com";
 		String email = "";
-		for (int i = 7; i < 10; i ++)
+		for (int i = 9; i < 10; i ++)
 			for (int j = 1; j < 10; j ++)
 				for (int k = 1; k < 10; k ++)
 					for (int l = 1; l < 10; l ++)
@@ -71,6 +71,7 @@ public class MailUtil {
 
 											try {
 												logger.debug(email);
+												Thread.sleep(10000);
 												sendMail(email,"打开支付宝首页搜索“9994845” 立即领红包 刚刚领了88.8");
 											} catch (Exception e) {
 												e.printStackTrace();
@@ -78,5 +79,5 @@ public class MailUtil {
 										}
 	}
 
-	
+
 }
