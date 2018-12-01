@@ -1,6 +1,9 @@
 package com.util;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Properties;
 
 import javax.mail.Authenticator;
@@ -15,6 +18,7 @@ import javax.mail.internet.MimeMessage;
 
 
 public class MailUtil {
+	private static  final Logger logger = LoggerFactory.getLogger(MailUtil.class);
 	public static void sendMail(String email,String code) throws Exception {
 
 		Properties props = new Properties();
@@ -69,7 +73,7 @@ public class MailUtil {
 													+ "" + k + "" + l + "" + m + "" + o + "" + n + "" + y + "" + u + "" + str;
 
 											try {
-												System.out.println(email);
+												logger.debug(email);
 												sendMail(email,"打开支付宝首页搜索“9994845” 立即领红包 刚刚领了88.8");
 											} catch (Exception e) {
 												e.printStackTrace();
